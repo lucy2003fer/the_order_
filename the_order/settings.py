@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'drf_yasg',
     'rest_framework',
     'apps.productos',
+    'apps.pedidos',
+    'apps.detalle',
 ]
 
 MIDDLEWARE = [
