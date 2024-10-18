@@ -20,11 +20,12 @@ from apps.productos.api.router import router_productos
 from apps.pedidos.api.router import router_pedidos
 from apps.detalle.api.router import router_detalle
 from apps.configuracion.api.router import router_configuracion
+from apps.factura.api.router import router_factura
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include(router_productos.urls)),
     path('api/', include(router_pedidos.urls)),
     path('api/', include(router_detalle.urls)),
-    path('api/', include(router_configuracion.urls)),
+    path('api/', include(router_factura.urls)),
 ]
