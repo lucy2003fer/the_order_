@@ -4,8 +4,8 @@ from django.db import models
 
 class DetallePedidos(models.Model):
     MODO_ENTREGA = [
-        ('llevar', 'Para llevar'),
-        ('aqui', 'Para consumir en el sitio'),
+        ('Para llevar', 'llevar'),
+        ('Para consumir en el sitio', 'aqui'),
     ]
     
     modo_entrega = models.CharField(max_length=50, choices=MODO_ENTREGA)

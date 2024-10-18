@@ -7,3 +7,4 @@ class FacturaViewSet(ModelViewSet):
     serializer_class = FacturaSerializer
     #permisos metodos
     #http_method_names = ['get', 'post']
+    

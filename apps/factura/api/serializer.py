@@ -1,7 +1,11 @@
-from rest_framework.serializers import ModelSerializer
+from rest_framework import serializers
 from apps.factura.models import Factura
 
-class FacturaSerializer(ModelSerializer):
+class FacturaSerializer(serializers.ModelSerializer):
     class Meta:
         model = Factura
-        fields = '__all__'
+        fields = ['id', 'pedido', 'total']
+
+    def to_representation(self, instance):
+        #étodo to_json para personalizar la salida de los datos 
+        return instance.to_json()
