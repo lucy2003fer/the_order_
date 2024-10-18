@@ -9,8 +9,8 @@ class DetallePedidos(models.Model):
     ]
     
     modo_entrega = models.CharField(max_length=50, choices=MODO_ENTREGA)
-    pedido = models.ForeignKey('pedidos.Pedidos', related_name='detalles_pedido', on_delete=models.SET_NULL, null=True)  # Cambiado a cadena
-    producto = models.ForeignKey('productos.Productos', related_name='detalles_producto', on_delete=models.SET_NULL, null=True)  # Cambiado a cadena
+    pedido = models.ForeignKey('pedidos.Pedidos', related_name='detalles_pedido', on_delete=models.SET_NULL, null=True)
+    producto = models.ForeignKey('productos.Productos', related_name='detalles_producto', on_delete=models.SET_NULL, null=True) 
     cantidad = models.PositiveIntegerField()
     observaciones = models.TextField(blank=True)
 

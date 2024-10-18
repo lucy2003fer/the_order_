@@ -17,8 +17,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from apps.productos.api.router import router_productos
+from apps.pedidos.api.router import router_pedidos
+from apps.detalle.api.router import router_detalle
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include(router_productos.urls)),
+    path('api/', include(router_pedidos.urls)),
+    path('api/', include(router_detalle.urls)),
 ]
